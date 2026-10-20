@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoonProof — 정오보고로 검증하는 CII·친환경 설비투자 판단 에이전트 (프로토타입)</title>
+<link rel="stylesheet" href="kit/kit.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side"><div class="side-in">
+    <div class="brand"><span class="dot"></span>NoonProof</div>
+    <div class="side-sub">정오보고로 검증하는 CII·친환경 설비투자 판단 에이전트</div>
+    <div class="shipbox">
+      <div class="lab">선박</div>
+      <div class="ship"><b>HB-07</b> <span>컨테이너선(피더) · 1,700TEU · 2009년식</span></div>
+      <div class="lab" style="margin-top:8px">회사</div>
+      <div class="ship"><span>예시해운 · 6척 · IT 전담 없음</span></div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">선박·회사·인물·운항 기록은 시연용 <b>가상 데이터</b>입니다. IMO 상수·연료 가격은 출처를 적은 실제 값입니다.</div>
+  </div></aside>
+  <main class="main">
+    <div class="top">
+      <div><div class="crumb" id="crumb"></div><h1 id="title"></h1></div>
+      <div class="top-r" id="topr"></div>
+    </div>
+    <div id="view"></div>
+    <div class="pager"><button class="btn" id="prev">← 이전 단계</button><span class="muted sm" id="pos"></span><button class="btn pri" id="next">다음 단계 →</button></div>
+    <footer class="foot">
+      <div><b>프로토타입 안내</b> · 계산(정리 규칙·기준선 모델·CII·최소 검출 효과·설치 후 검증)은 이 페이지가 브라우저에서 직접 합니다(engine.js).
+      AI 단계(정오보고 추출·제안서 판독·투자 메모)는 같은 입력으로 Claude가 미리 만든 결과를 보여 주며, 원문과 결과를 함께 공개합니다.</div>
+      <div>CII 산식·상수: IMO MEPC.352·353·354·355(78), MEPC.338(76)·364(79)·400(83) — 원문 대조 2026-10-20. 선박·회사·업체는 모두 가상입니다.</div>
+    </footer>
+  </main>
+</div>
+<script src="data/spec.js"></script>
+<script src="data/noon.js"></script>
+<script src="data/ai_extract.js"></script>
+<script src="data/ai_memo.js"></script>
+<script src="engine.js"></script>
+<script src="charts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

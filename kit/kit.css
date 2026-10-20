@@ -1,0 +1,40 @@
+/* 프로토타입 공통 UI — 해운 운영 업무 화면(B2B). 글꼴 Pretendard(SIL OFL, 로컬 파일) */
+@font-face { font-family: 'Pretendard'; src: url('fonts/PretendardVariable.ttf') format('truetype'); font-weight: 100 900; font-display: block; }
+:root {
+  --navy: #0b2545; --navy2: #13315c; --blue: #1d5fa7; --sky: #e8f0fa; --teal: #0f8b8d; --teal2: #e3f4f3;
+  --amber: #c77d0a; --amber2: #fdf3e0; --red: #c0392b; --red2: #fbe9e7; --green: #2e7d4f; --green2: #e6f4ea;
+  --ink: #17202a; --ink2: #3d4a57; --mute: #6b7785; --line: #dde3ea; --bg: #f4f6f9; --card: #ffffff;
+  --r: 10px; --sh: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Myanmar Sangam MN', 'Noto Sans Myanmar', sans-serif; color: var(--ink); background: var(--bg); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.app { display: grid; grid-template-columns: 232px 1fr; min-height: 100vh; }
+.side { background: var(--navy); color: #c9d6e6; padding: 18px 14px; }
+.brand { color: #fff; font-weight: 800; font-size: 17px; letter-spacing: -.2px; display: flex; gap: 8px; align-items: center; margin: 2px 6px 20px; }
+.brand .dot { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg, #2b7bd3, #0f8b8d); display: inline-block; }
+.nav a { display: flex; align-items: center; gap: 10px; color: #c9d6e6; text-decoration: none; padding: 9px 10px; border-radius: 8px; font-weight: 600; font-size: 13.5px; }
+.nav a.on { background: rgba(255,255,255,.1); color: #fff; }
+.nav .sec { font-size: 11px; color: #7f93ab; margin: 16px 10px 6px; letter-spacing: .4px; }
+.main { padding: 20px 26px 28px; }
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.crumb { color: var(--mute); font-size: 12.5px; }
+h1 { font-size: 21px; margin: 2px 0 0; letter-spacing: -.3px; }
+.grid { display: grid; gap: 14px; }
+.g2 { grid-template-columns: 1fr 1fr; } .g3 { grid-template-columns: repeat(3, 1fr); } .g4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--sh); padding: 14px 16px; }
+.card h3 { font-size: 14px; margin: 0 0 10px; display: flex; align-items: center; justify-content: space-between; }
+.kpi .v { font-size: 26px; font-weight: 800; letter-spacing: -.5px; }
+.kpi .l { color: var(--mute); font-size: 12.5px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 700; }
+.b-red { background: var(--red2); color: var(--red); } .b-amb { background: var(--amber2); color: var(--amber); }
+.b-grn { background: var(--green2); color: var(--green); } .b-blu { background: var(--sky); color: var(--blue); } .b-gry { background: #eef1f4; color: var(--ink2); }
+table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.tb th { text-align: left; color: var(--mute); font-weight: 600; font-size: 12px; border-bottom: 1px solid var(--line); padding: 7px 8px; }
+table.tb td { border-bottom: 1px solid #eef1f4; padding: 8px; vertical-align: top; }
+.btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 8px; padding: 8px 13px; font-weight: 700; font-size: 13px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+.btn.pri { background: var(--blue); border-color: var(--blue); color: #fff; }
+.muted { color: var(--mute); } .sm { font-size: 12px; }
+.bar { height: 8px; background: #eef1f4; border-radius: 99px; overflow: hidden; } .bar > i { display: block; height: 100%; background: var(--blue); }
+.note { font-size: 11.5px; color: var(--mute); }
+.demo-flag { position: fixed; right: 14px; bottom: 12px; background: rgba(11,37,69,.86); color: #fff; font-size: 11.5px; padding: 6px 10px; border-radius: 8px; }
